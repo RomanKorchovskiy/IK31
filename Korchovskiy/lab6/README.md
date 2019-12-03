@@ -11,3 +11,6 @@
 - переписав білд lab4
 - переписав білд lab5
 - посилання на білд травіс - https://travis-ci.org/RomanKorchovskiy/IK31
+
+----------------------------
+Edited to start travis build
