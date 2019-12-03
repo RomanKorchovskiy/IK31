@@ -26,7 +26,7 @@ jobs:
       install:
         - cd ./Korchovskiy/lab4/
       script:
-        - docker build -t r0mankor/lab4-repo:django-travis .
+        - docker build -t r0mankor/lab4-repo:django-travis --file Dockerfile.django .
         - docker images
         - if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin; docker push r0mankor/lab4-repo:django-travis; else echo "PR skip deploy"; fi
     - stage: "Build Lab 5."
