@@ -1,0 +1,17 @@
+version: '3.7'
+services:
+  django:
+    build:
+      context: .
+      dockerfile: Dockerfile.django
+    image: r0mankor/lab4-repo:compose-django
+    container_name: compose-django
+    ports:
+      - 8000:8000
+  monitoring:
+    build:
+      context: .
+      dockerfile: Dockerfile.mon
+    image: r0mankor/lab4-repo:compose-monitoring
+    container_name: compose-monitoring
+    network_mode: "host"
